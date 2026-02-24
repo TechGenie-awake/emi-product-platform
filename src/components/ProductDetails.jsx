@@ -6,10 +6,12 @@ import { Wallet, ShieldCheck, TrendingUp } from 'lucide-react'
 import VariantSelector from './VariantSelector'
 import EMIPlanCard from './EMIPlanCard'
 import ProductImage from './ProductImage'
+import ConfirmationModal from './ConfirmationModal'
 
 export default function ProductDetails({ product, initialVariant }) {
   const [selectedVariant, setSelectedVariant] = useState(initialVariant)
   const [selectedPlan, setSelectedPlan] = useState(selectedVariant.emiPlans[0])
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   const discount = calculateDiscount(selectedVariant.price, selectedVariant.mrp)
   const downpayment = Math.round(selectedVariant.price * 0.02)
@@ -21,7 +23,6 @@ export default function ProductDetails({ product, initialVariant }) {
 
   return (
     <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-      {/* Left panel — image, stays in sync with selectedVariant */}
       <div className="lg:sticky lg:top-12 lg:self-start">
         <ProductImage
           imageUrl={selectedVariant.imageUrl}
@@ -29,7 +30,6 @@ export default function ProductDetails({ product, initialVariant }) {
         />
       </div>
 
-      {/* Right panel — details, variant selector, EMI plans */}
       <div className="flex flex-col h-full">
         <div className="flex-1 space-y-6">
           <div>
@@ -96,8 +96,11 @@ export default function ProductDetails({ product, initialVariant }) {
         </div>
 
         <div className="sticky bottom-0 bg-white pt-6 border-t border-gray-200 mt-6">
-          <button className="w-full py-4 bg-gray-900 text-white font-semibold rounded-xl 
-                           hover:bg-gray-800 transition-colors flex items-center justify-center gap-2">
+          <button 
+            onClick={() => setIsModalOpen(true)}
+            className="w-full py-4 bg-gray-900 text-white font-semibold rounded-xl 
+                           hover:bg-gray-800 transition-colors flex items-center justify-center gap-2"
+          >
             <ShieldCheck className="w-5 h-5" />
             Proceed with {selectedPlan.tenure}-month EMI
           </button>
@@ -114,6 +117,18 @@ export default function ProductDetails({ product, initialVariant }) {
           </div>
         </div>
       </div>
+
+      <ConfirmationModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        product={product}
+        variant={selectedVariant}
+        plan={selectedPlan}
+        onConfirm={() => {
+          alert('Purchase confirmed!')
+          setIsModalOpen(false)
+        }}
+      />
     </div>
   )
 }
