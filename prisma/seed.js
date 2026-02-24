@@ -23,11 +23,11 @@ async function main() {
       variants: {
         create: [
           {
-            color: 'Desert Titanium',
+            color: 'Deep Blue',
             storage: '256GB',
             price: 127400,
             mrp: 134900,
-            imageUrl: 'https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-pro-finish-select-202509-6-9inch-deserttitanium?wid=800&hei=800&fmt=jpeg&qlt=90',
+            imageUrl: '/images/iphone-17-pro-deep-blue.webp',
             emiPlans: {
               create: [
                 { tenure: 3,  monthlyAmount: 44967, interestRate: 0,    cashback: 7500 },
@@ -41,11 +41,11 @@ async function main() {
             },
           },
           {
-            color: 'Natural Titanium',
+            color: 'Silver',
             storage: '256GB',
             price: 127400,
             mrp: 134900,
-            imageUrl: 'https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-pro-finish-select-202509-6-9inch-naturaltitanium?wid=800&hei=800&fmt=jpeg&qlt=90',
+            imageUrl: '/images/iphone-17-pro-silver.webp',
             emiPlans: {
               create: [
                 { tenure: 3,  monthlyAmount: 44967, interestRate: 0,    cashback: 7500 },
@@ -59,11 +59,11 @@ async function main() {
             },
           },
           {
-            color: 'Black Titanium',
+            color: 'Cosmic Orange',
             storage: '512GB',
             price: 147400,
             mrp: 154900,
-            imageUrl: 'https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-pro-finish-select-202509-6-9inch-blacktitanium?wid=800&hei=800&fmt=jpeg&qlt=90',
+            imageUrl: '/images/iphone-17-pro-cosmic-orange.webp',
             emiPlans: {
               create: [
                 { tenure: 3,  monthlyAmount: 51967, interestRate: 0,    cashback: 7500 },
@@ -95,7 +95,7 @@ async function main() {
             storage: '256GB',
             price: 124999,
             mrp: 134999,
-            imageUrl: 'https://images.samsung.com/is/image/samsung/p6pim/in/2501/gallery/in-galaxy-s25-ultra-s938-sm-s938bzkdins-thumb-542428387?$650_519_PNG$',
+            imageUrl: '/images/samsung-galaxy-s25-ultra-Titanium-Black.png',
             emiPlans: {
               create: [
                 { tenure: 3,  monthlyAmount: 43999, interestRate: 0,    cashback: 5000 },
@@ -109,11 +109,47 @@ async function main() {
             },
           },
           {
-            color: 'Titanium Silver',
+            color: 'Titanium Whitesilver',
+            storage: '256GB',
+            price: 124999,
+            mrp: 134999,
+            imageUrl: '/images/samsung-galaxy-s25-ultra-Titanium-Whitesilver.png',
+            emiPlans: {
+              create: [
+                { tenure: 3,  monthlyAmount: 43999, interestRate: 0,    cashback: 5000 },
+                { tenure: 6,  monthlyAmount: 21999, interestRate: 0,    cashback: 5000 },
+                { tenure: 12, monthlyAmount: 10999, interestRate: 0,    cashback: 5000 },
+                { tenure: 24, monthlyAmount: 5499,  interestRate: 0,    cashback: 5000 },
+                { tenure: 36, monthlyAmount: 4204,  interestRate: 10.5, cashback: 5000 },
+                { tenure: 48, monthlyAmount: 3312,  interestRate: 10.5, cashback: 5000 },
+                { tenure: 60, monthlyAmount: 2781,  interestRate: 10.5, cashback: 5000 },
+              ],
+            },
+          },
+          {
+            color: 'Titanium Gray',
             storage: '512GB',
             price: 144999,
             mrp: 154999,
-            imageUrl: 'https://images.samsung.com/is/image/samsung/p6pim/in/2501/gallery/in-galaxy-s25-ultra-s938-sm-s938bzsgins-thumb-542428392?$650_519_PNG$',
+            imageUrl: '/images/samsung-galaxy-s25-ultra-Titanium-Gray.png',
+            emiPlans: {
+              create: [
+                { tenure: 3,  monthlyAmount: 50999, interestRate: 0,    cashback: 5000 },
+                { tenure: 6,  monthlyAmount: 25499, interestRate: 0,    cashback: 5000 },
+                { tenure: 12, monthlyAmount: 12749, interestRate: 0,    cashback: 5000 },
+                { tenure: 24, monthlyAmount: 6374,  interestRate: 0,    cashback: 5000 },
+                { tenure: 36, monthlyAmount: 4871,  interestRate: 10.5, cashback: 5000 },
+                { tenure: 48, monthlyAmount: 3836,  interestRate: 10.5, cashback: 5000 },
+                { tenure: 60, monthlyAmount: 3222,  interestRate: 10.5, cashback: 5000 },
+              ],
+            },
+          },
+          {
+            color: 'Titanium Silverblue',
+            storage: '512GB',
+            price: 144999,
+            mrp: 154999,
+            imageUrl: '/images/samsung-galaxy-s25-ultra-Titanium-Silverblue.png',
             emiPlans: {
               create: [
                 { tenure: 3,  monthlyAmount: 50999, interestRate: 0,    cashback: 5000 },
@@ -141,11 +177,11 @@ async function main() {
       variants: {
         create: [
           {
-            color: 'Flowy Emerald',
+            color: 'Arctic Dawn',
             storage: '256GB',
             price: 69999,
             mrp: 74999,
-            imageUrl: 'https://image01.oneplus.net/epboard/202412/05/a2f8c3e4-b5d6-4f7a-8c9e-0d1f2a3b4c5d.png',
+            imageUrl: '/images/oneplus-13-arctic-dawn.webp',
             emiPlans: {
               create: [
                 { tenure: 3,  monthlyAmount: 24666, interestRate: 0,    cashback: 3000 },
@@ -160,10 +196,28 @@ async function main() {
           },
           {
             color: 'Black Eclipse',
+            storage: '256GB',
+            price: 69999,
+            mrp: 74999,
+            imageUrl: '/images/oneplus-13-black-eclipse.webp',
+            emiPlans: {
+              create: [
+                { tenure: 3,  monthlyAmount: 24666, interestRate: 0,    cashback: 3000 },
+                { tenure: 6,  monthlyAmount: 12333, interestRate: 0,    cashback: 3000 },
+                { tenure: 12, monthlyAmount: 6166,  interestRate: 0,    cashback: 3000 },
+                { tenure: 24, monthlyAmount: 3083,  interestRate: 0,    cashback: 3000 },
+                { tenure: 36, monthlyAmount: 2357,  interestRate: 10.5, cashback: 3000 },
+                { tenure: 48, monthlyAmount: 1856,  interestRate: 10.5, cashback: 3000 },
+                { tenure: 60, monthlyAmount: 1559,  interestRate: 10.5, cashback: 3000 },
+              ],
+            },
+          },
+          {
+            color: 'Midnight Ocean',
             storage: '512GB',
             price: 79999,
             mrp: 84999,
-            imageUrl: 'https://image01.oneplus.net/epboard/202412/05/b3e9d4f5-c6e7-5g8b-9d0e-1e2g3b4c5d6e.png',
+            imageUrl: '/images/oneplus-13-midnight-ocean.webp',
             emiPlans: {
               create: [
                 { tenure: 3,  monthlyAmount: 28166, interestRate: 0,    cashback: 3000 },
