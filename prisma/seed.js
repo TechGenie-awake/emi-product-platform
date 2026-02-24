@@ -95,7 +95,7 @@ async function main() {
             storage: '256GB',
             price: 124999,
             mrp: 134999,
-            imageUrl: '/images/samsung-galaxy-s25-ultra-Titanium-Black.png',
+            imageUrl: '/images/samsung-galaxy-s25-ultra-Titanium-Black1.png',
             emiPlans: {
               create: [
                 { tenure: 3,  monthlyAmount: 43999, interestRate: 0,    cashback: 5000 },
@@ -113,7 +113,7 @@ async function main() {
             storage: '256GB',
             price: 124999,
             mrp: 134999,
-            imageUrl: '/images/samsung-galaxy-s25-ultra-Titanium-Whitesilver.png',
+            imageUrl: '/images/samsung-galaxy-s25-ultra-Titanium-Whitesilver1.png',
             emiPlans: {
               create: [
                 { tenure: 3,  monthlyAmount: 43999, interestRate: 0,    cashback: 5000 },
@@ -131,7 +131,7 @@ async function main() {
             storage: '512GB',
             price: 144999,
             mrp: 154999,
-            imageUrl: '/images/samsung-galaxy-s25-ultra-Titanium-Gray.png',
+            imageUrl: '/images/samsung-galaxy-s25-ultra-Titanium-Gray1.png',
             emiPlans: {
               create: [
                 { tenure: 3,  monthlyAmount: 50999, interestRate: 0,    cashback: 5000 },
@@ -149,7 +149,7 @@ async function main() {
             storage: '512GB',
             price: 144999,
             mrp: 154999,
-            imageUrl: '/images/samsung-galaxy-s25-ultra-Titanium-Silverblue.png',
+            imageUrl: '/images/samsung-galaxy-s25-ultra-Titanium-Silverblue1.png',
             emiPlans: {
               create: [
                 { tenure: 3,  monthlyAmount: 50999, interestRate: 0,    cashback: 5000 },
