@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 1Fi EMI Store
 
-## Getting Started
+Buy premium smartphones with flexible EMI plans backed by mutual funds.
 
-First, run the development server:
+## 🔗 Live Demo
+**https://emi-product-platform.vercel.app/**
+
+## 🛠️ Tech Stack
+- Next.js 14
+- PostgreSQL + Prisma
+- Tailwind CSS
+- Vercel
+
+## ⚡ Quick Start
 
 ```bash
+# Install dependencies
+npm install
+
+# Setup environment variables
+cp .env.example .env
+# Add your DATABASE_URL
+
+# Push database schema
+npx prisma db push
+
+# Seed database
+npm run seed
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/
+│   ├── api/products/          # API routes
+│   ├── products/[slug]/       # Dynamic product pages
+│   └── page.js                # Home page with filters
+├── components/                # React components
+└── lib/                       # Utils & Prisma client
 
-## Learn More
+prisma/
+├── schema.prisma              # Database schema
+└── seed.js                    # Sample data
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 API Endpoints
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `GET /api/products` - List all products
+- `GET /api/products/[slug]` - Get product by slug with variants & EMI plans
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Example Response
+```json
+{
+  "id": "...",
+  "name": "iPhone 17 Pro",
+  "slug": "iphone-17-pro",
+  "brand": "Apple",
+  "variants": [
+    {
+      "color": "Deep Blue",
+      "storage": "256GB",
+      "price": 127400,
+      "images": ["/images/iphone-17-pro-deep-blue.png"],
+      "emiPlans": [
+        {
+          "tenure": 3,
+          "monthlyAmount": 44967,
+          "interestRate": 0,
+          "cashback": 7500
+        }
+      ]
+    }
+  ]
+}
+``` 
 
-## Deploy on Vercel
+## 🗄️ Database Schema
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Product** → **ProductVariant** → **EmiPlan**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Each product has multiple variants (colors/storage), and each variant has multiple EMI plans.
+
+---
+
+Built for 1Fi Full Stack Developer Assignment
