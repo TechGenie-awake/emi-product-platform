@@ -5,13 +5,13 @@ import { formatPrice, calculateDiscount } from '@/lib/utils'
 import { Wallet, ShieldCheck, TrendingUp } from 'lucide-react'
 import VariantSelector from './VariantSelector'
 import EMIPlanCard from './EMIPlanCard'
-import ProductImage from './ProductImage'
 import ConfirmationModal from './ConfirmationModal'
+import ProductImage from './ProductImage'
 
 export default function ProductDetails({ product, initialVariant }) {
   const [selectedVariant, setSelectedVariant] = useState(initialVariant)
   const [selectedPlan, setSelectedPlan] = useState(selectedVariant.emiPlans[0])
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [showModal, setShowModal] = useState(false)
 
   const discount = calculateDiscount(selectedVariant.price, selectedVariant.mrp)
   const downpayment = Math.round(selectedVariant.price * 0.02)
@@ -21,15 +21,22 @@ export default function ProductDetails({ product, initialVariant }) {
     setSelectedPlan(newVariant.emiPlans[0])
   }
 
+  const handleConfirmPurchase = () => {
+    setShowModal(false)
+    alert(`Purchase confirmed!\n\nProduct: ${product.name}\nVariant: ${selectedVariant.color}, ${selectedVariant.storage}\nEMI: ${formatPrice(selectedPlan.monthlyAmount)}/month for ${selectedPlan.tenure} months\n\nThank you for your purchase!`)
+  }
+
   return (
     <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+      {/* Left panel - image synced with selected variant */}
       <div className="lg:sticky lg:top-12 lg:self-start">
-        <ProductImage
-          imageUrl={selectedVariant.imageUrl}
+        <ProductImage 
+          variant={selectedVariant}
           productName={product.name}
         />
       </div>
 
+      {/* Right panel - details */}
       <div className="flex flex-col h-full">
         <div className="flex-1 space-y-6">
           <div>
@@ -97,9 +104,9 @@ export default function ProductDetails({ product, initialVariant }) {
 
         <div className="sticky bottom-0 bg-white pt-6 border-t border-gray-200 mt-6">
           <button 
-            onClick={() => setIsModalOpen(true)}
+            onClick={() => setShowModal(true)}
             className="w-full py-4 bg-gray-900 text-white font-semibold rounded-xl 
-                           hover:bg-gray-800 transition-colors flex items-center justify-center gap-2"
+                       hover:bg-gray-800 transition-colors flex items-center justify-center gap-2"
           >
             <ShieldCheck className="w-5 h-5" />
             Proceed with {selectedPlan.tenure}-month EMI
@@ -119,15 +126,12 @@ export default function ProductDetails({ product, initialVariant }) {
       </div>
 
       <ConfirmationModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
+        isOpen={showModal}
+        onClose={() => setShowModal(false)}
         product={product}
         variant={selectedVariant}
         plan={selectedPlan}
-        onConfirm={() => {
-          alert('Purchase confirmed!')
-          setIsModalOpen(false)
-        }}
+        onConfirm={handleConfirmPurchase}
       />
     </div>
   )
