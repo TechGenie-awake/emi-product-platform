@@ -25,10 +25,10 @@ export default async function ProductPage({ params }) {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12">
         <Link 
           href="/" 
-          className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-900 mb-8 group"
+          className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-900 mb-6 sm:mb-8 group"
         >
           <ArrowLeft className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1" />
           Back to Home
@@ -39,11 +39,11 @@ export default async function ProductPage({ params }) {
           initialVariant={firstVariant}
         />
 
-        <div className="mt-16 border-t border-gray-200 pt-12">
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">
+        <div className="mt-12 sm:mt-16 border-t border-gray-200 pt-8 sm:pt-12">
+          <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4">
             About {product.name}
           </h3>
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
             {product.description}
           </p>
         </div>

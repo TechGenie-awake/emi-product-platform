@@ -12,15 +12,15 @@ export default function ProductFilters({
   maxPrice
 }) {
   return (
-    <div className="w-full lg:w-64 space-y-6">
-      <div className="flex items-center gap-2 pb-4 border-b border-gray-200">
-        <SlidersHorizontal className="w-5 h-5 text-gray-700" />
-        <h2 className="text-lg font-semibold text-gray-900">Filters</h2>
+    <div className="w-full lg:w-64 space-y-4 sm:space-y-6">
+      <div className="flex items-center gap-2 pb-3 sm:pb-4 border-b border-gray-200">
+        <SlidersHorizontal className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700" />
+        <h2 className="text-base sm:text-lg font-semibold text-gray-900">Filters</h2>
       </div>
 
       <div>
-        <h3 className="text-sm font-semibold text-gray-900 mb-3">Brand</h3>
-        <div className="space-y-2">
+        <h3 className="text-sm font-semibold text-gray-900 mb-2 sm:mb-3">Brand</h3>
+        <div className="space-y-1.5 sm:space-y-2">
           {brands.map(brand => (
             <label 
               key={brand}
@@ -46,24 +46,24 @@ export default function ProductFilters({
       </div>
 
       <div>
-        <h3 className="text-sm font-semibold text-gray-900 mb-3">Price Range</h3>
-        <div className="space-y-3">
+        <h3 className="text-sm font-semibold text-gray-900 mb-2 sm:mb-3">Price Range</h3>
+        <div className="space-y-2 sm:space-y-3">
           <div className="flex items-center gap-2">
             <input
               type="number"
               placeholder="Min"
               value={priceRange[0] || ''}
               onChange={(e) => onPriceRangeChange([Number(e.target.value) || 0, priceRange[1]])}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm
+              className="w-full px-2 sm:px-3 py-2 border border-gray-300 rounded-lg text-sm
                        focus:outline-none focus:ring-2 focus:ring-gray-900"
             />
-            <span className="text-gray-500">-</span>
+            <span className="text-gray-500 text-sm">-</span>
             <input
               type="number"
               placeholder="Max"
               value={priceRange[1] || ''}
               onChange={(e) => onPriceRangeChange([priceRange[0], Number(e.target.value) || maxPrice])}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm
+              className="w-full px-2 sm:px-3 py-2 border border-gray-300 rounded-lg text-sm
                        focus:outline-none focus:ring-2 focus:ring-gray-900"
             />
           </div>
