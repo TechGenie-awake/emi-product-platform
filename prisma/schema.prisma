@@ -25,6 +25,7 @@ model ProductVariant {
   price     Int
   mrp       Int
   imageUrl  String
+  images    String[]  @default([])
   inStock   Boolean   @default(true)
   emiPlans  EmiPlan[]
 }

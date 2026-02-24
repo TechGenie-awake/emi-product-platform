@@ -28,6 +28,10 @@ async function main() {
             price: 127400,
             mrp: 134900,
             imageUrl: '/images/iphone-17-pro-deep-blue.png',
+            images: [
+              '/images/iphone-17-pro-deep-blue.png',
+              '/images/iphone-17-pro-deep-blue-side.png',
+            ],
             emiPlans: {
               create: [
                 { tenure: 3,  monthlyAmount: 44967, interestRate: 0,    cashback: 7500 },
@@ -46,6 +50,10 @@ async function main() {
             price: 127400,
             mrp: 134900,
             imageUrl: '/images/iphone-17-pro-silver.png',
+            images: [
+              '/images/iphone-17-pro-silver.png',
+              '/images/iphone-17-pro-silver-side.png',
+            ],
             emiPlans: {
               create: [
                 { tenure: 3,  monthlyAmount: 44967, interestRate: 0,    cashback: 7500 },
@@ -64,6 +72,10 @@ async function main() {
             price: 147400,
             mrp: 154900,
             imageUrl: '/images/iphone-17-pro-cosmic-orange.png',
+            images: [
+              '/images/iphone-17-pro-cosmic-orange.png',
+              '/images/iphone-17-pro-cosmic-orange-side.png',
+            ],
             emiPlans: {
               create: [
                 { tenure: 3,  monthlyAmount: 51967, interestRate: 0,    cashback: 7500 },
@@ -96,6 +108,11 @@ async function main() {
             price: 124999,
             mrp: 134999,
             imageUrl: '/images/samsung-galaxy-s25-ultra-Titanium-Black1.png',
+            images: [
+              '/images/samsung-galaxy-s25-ultra-Titanium-Black1.png',
+              '/images/samsung-s25-ultra-Titanium-Black.png',
+              '/images/samsung-s25-ultra-Titanium-Black-side2.png',
+            ],
             emiPlans: {
               create: [
                 { tenure: 3,  monthlyAmount: 43999, interestRate: 0,    cashback: 5000 },
@@ -114,6 +131,11 @@ async function main() {
             price: 124999,
             mrp: 134999,
             imageUrl: '/images/samsung-galaxy-s25-ultra-Titanium-Whitesilver1.png',
+            images: [
+              '/images/samsung-galaxy-s25-ultra-Titanium-Whitesilver1.png',
+              '/images/samsung-s25-ultra-Titanium-Whitesilver.png',
+              '/images/samsung-s25-ultra-Titanium-Whitesilver-side2.png',
+            ],
             emiPlans: {
               create: [
                 { tenure: 3,  monthlyAmount: 43999, interestRate: 0,    cashback: 5000 },
@@ -132,6 +154,11 @@ async function main() {
             price: 144999,
             mrp: 154999,
             imageUrl: '/images/samsung-galaxy-s25-ultra-Titanium-Gray1.png',
+            images: [
+              '/images/samsung-galaxy-s25-ultra-Titanium-Gray1.png',
+              '/images/samsung-s25-ultra-Titanium-Gray.png',
+              '/images/samsung-s25-ultra-Titanium-Gray-side2.png',
+            ],
             emiPlans: {
               create: [
                 { tenure: 3,  monthlyAmount: 50999, interestRate: 0,    cashback: 5000 },
@@ -150,6 +177,11 @@ async function main() {
             price: 144999,
             mrp: 154999,
             imageUrl: '/images/samsung-galaxy-s25-ultra-Titanium-Silverblue1.png',
+            images: [
+              '/images/samsung-galaxy-s25-ultra-Titanium-Silverblue1.png',
+              '/images/samsung-s25-ultra-Titanium-Silverblue.png',
+              '/images/samsung-s25-ultra-Titanium-Silverblue-side2.png',
+            ],
             emiPlans: {
               create: [
                 { tenure: 3,  monthlyAmount: 50999, interestRate: 0,    cashback: 5000 },
@@ -182,6 +214,10 @@ async function main() {
             price: 69999,
             mrp: 74999,
             imageUrl: '/images/oneplus-13-arctic-dawn.webp',
+            images: [
+              '/images/oneplus-13-arctic-dawn.webp',
+              '/images/oneplus-13-arctic-dawn-side1.webp',
+            ],
             emiPlans: {
               create: [
                 { tenure: 3,  monthlyAmount: 24666, interestRate: 0,    cashback: 3000 },
@@ -200,6 +236,10 @@ async function main() {
             price: 69999,
             mrp: 74999,
             imageUrl: '/images/oneplus-13-black-eclipse.webp',
+            images: [
+              '/images/oneplus-13-black-eclipse.webp',
+              '/images/oneplus-13-black-eclipse-side1.webp',
+            ],
             emiPlans: {
               create: [
                 { tenure: 3,  monthlyAmount: 24666, interestRate: 0,    cashback: 3000 },
@@ -218,6 +258,10 @@ async function main() {
             price: 79999,
             mrp: 84999,
             imageUrl: '/images/oneplus-13-midnight-ocean.webp',
+            images: [
+              '/images/oneplus-13-midnight-ocean.webp',
+              '/images/oneplus-13-midnight-ocean-side1.webp',
+            ],
             emiPlans: {
               create: [
                 { tenure: 3,  monthlyAmount: 28166, interestRate: 0,    cashback: 3000 },
