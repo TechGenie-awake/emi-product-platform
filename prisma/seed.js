@@ -27,7 +27,7 @@ async function main() {
             storage: '256GB',
             price: 127400,
             mrp: 134900,
-            imageUrl: '/images/iphone-17-pro-deep-blue.webp',
+            imageUrl: '/images/iphone-17-pro-deep-blue.png',
             emiPlans: {
               create: [
                 { tenure: 3,  monthlyAmount: 44967, interestRate: 0,    cashback: 7500 },
@@ -45,7 +45,7 @@ async function main() {
             storage: '256GB',
             price: 127400,
             mrp: 134900,
-            imageUrl: '/images/iphone-17-pro-silver.webp',
+            imageUrl: '/images/iphone-17-pro-silver.png',
             emiPlans: {
               create: [
                 { tenure: 3,  monthlyAmount: 44967, interestRate: 0,    cashback: 7500 },
@@ -63,7 +63,7 @@ async function main() {
             storage: '512GB',
             price: 147400,
             mrp: 154900,
-            imageUrl: '/images/iphone-17-pro-cosmic-orange.webp',
+            imageUrl: '/images/iphone-17-pro-cosmic-orange.png',
             emiPlans: {
               create: [
                 { tenure: 3,  monthlyAmount: 51967, interestRate: 0,    cashback: 7500 },
