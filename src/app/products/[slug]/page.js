@@ -1,4 +1,6 @@
 import { notFound } from 'next/navigation'
+import Link from 'next/link'
+import { ArrowLeft } from 'lucide-react'
 import ProductDetails from '@/components/ProductDetails'
 
 async function getProduct(slug) {
@@ -24,6 +26,14 @@ export default async function ProductPage({ params }) {
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <Link 
+          href="/" 
+          className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-900 mb-8 group"
+        >
+          <ArrowLeft className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1" />
+          Back to Home
+        </Link>
+
         <ProductDetails 
           product={product}
           initialVariant={firstVariant}
